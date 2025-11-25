@@ -1,0 +1,279 @@
+/* 🌿 พื้นหลังและฟอนต์ */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #222;
+  background: linear-gradient(180deg, #f7f7f7 0%, #ededed 100%);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* 🌐 Navbar */
+.navbar {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  z-index: 1000;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #555;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Navbar ตอน scroll */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  backdrop-filter: blur(12px);
+}
+
+/* ✨ Hero */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+  background: #fafafa;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #222;
+}
+.hero-text span {
+  color: #777;
+}
+
+.hero-text p {
+  margin: 10px 0;
+  color: #444;
+}
+
+.hero-text button {
+  margin-top: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hero-text button:hover {
+  background: #555;
+}
+
+/* 🔹 Sections */
+section {
+  max-width: 950px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 60px 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  color: #111;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+p {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* 💠 Skills */
+.skill-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.skill-card {
+  width: 100px;
+  height: 120px;
+  background: #fafafa;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  background: #f0f0f0;
+}
+
+/* 🧱 Projects — อัตโนมัติ 1 ชิ้น = กลาง | 2 ชิ้น = ซ้าย-ขวา */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 700px;
+  margin: 30px auto;
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-title {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* 📞 Contact */
+.contact {
+  background: #f9f9f9;
+}
+
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  color: #333;
+  font-size: 22px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  }
+  nav.active {
+    display: flex;
+  }
+  nav a {
+    padding: 15px 0;
+    margin: 0;
+  }
+  #menu-toggle {
+    display: block;
+  }
+  .hero-inner {
+    flex-direction: column;
+  }
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+  .hero-text h1 {
+    font-size: 28px;
+  }
+}
