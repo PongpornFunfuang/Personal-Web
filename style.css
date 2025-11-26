@@ -11,7 +11,7 @@ body {
 /* 🌐 Navbar */
 .navbar {
   position: fixed;
-  top: 15px;
+  top: 5px; /* ลดจาก 15px */
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -22,18 +22,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
+  padding: 8px 30px; /* ลด padding */
   z-index: 1000;
   border: 1px solid rgba(0,0,0,0.05);
 }
 
 .logo-img {
-  height: 40px;
+  height: 35px; /* ลดเล็กน้อย */
   width: auto;
 }
 
 nav a {
-  margin-left: 25px;
+  margin-left: 20px; /* ลดจาก 25px */
   text-decoration: none;
   color: #000;
   font-weight: 500;
@@ -59,12 +59,12 @@ nav a:hover {
 
 /* ✨ Hero */
 .hero {
-  min-height: 70vh;
+  min-height: 55vh; /* เดิม 70vh */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 60px; /* เดิม 100px */
   background: #fafafa;
 }
 
@@ -73,12 +73,12 @@ nav a:hover {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 40px; /* ลดจาก 50 */
 }
 
 .profile-img {
-  width: 180px;
-  height: 180px;
+  width: 160px; /* ลดจาก 180 */
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid rgba(0, 0, 0, 0.1);
@@ -86,8 +86,8 @@ nav a:hover {
 }
 
 .hero-text h1 {
-  font-size: 34px;
-  margin-bottom: 10px;
+  font-size: 30px; /* ลดจาก 34 */
+  margin-bottom: 8px;
   color: #222;
 }
 .hero-text span {
@@ -95,18 +95,18 @@ nav a:hover {
 }
 
 .hero-text p {
-  margin: 10px 0;
+  margin: 8px 0;
   color: #444;
 }
 
 .hero-text button {
-  margin-top: 10px;
+  margin-top: 8px;
   background: #333;
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 18px;
+  font-size: 15px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -117,14 +117,13 @@ nav a:hover {
 /* 🔹 Sections */
 section {
   max-width: 950px;
-  margin: 100px auto;
-  text-align: center;
-  padding: 60px 30px;
+  margin: 50px auto;   /* ลดจาก 100px */
+  padding: 40px 25px;  /* ลดจาก 60px 30px */
   background: white;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(20px); /* ลดระยะ fade-in */
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -135,8 +134,8 @@ section.fade-in {
 
 h2 {
   color: #111;
-  margin-bottom: 20px;
-  font-size: 26px;
+  margin-bottom: 18px; /* เดิม 20px */
+  font-size: 24px; /* เดิม 26 */
 }
 
 p {
@@ -149,13 +148,13 @@ p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 20px;
+  gap: 30px; /* ลดจาก 40 */
+  margin-top: 15px; /* ลดจาก 20 */
 }
 
 .skill-card {
-  width: 100px;
-  height: 120px;
+  width: 95px; /* ลดจาก 100 */
+  height: 110px; /* ลดจาก 120 */
   background: #fafafa;
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,0.08);
@@ -168,23 +167,23 @@ p {
 }
 
 .skill-card img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 8px;
+  width: 45px; /* ลดจาก 50 */
+  height: 45px;
+  margin-bottom: 6px;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   background: #f0f0f0;
 }
 
-/* 🧱 Projects — อัตโนมัติ 1 ชิ้น = กลาง | 2 ชิ้น = ซ้าย-ขวา */
+/* 🧱 Projects */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  max-width: 700px;
-  margin: 30px auto;
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* ลดขนาด */
+  max-width: 650px; /* ลดจาก 700 */
+  margin: 25px auto;
+  gap: 20px; /* ลดจาก 25 */
 }
 
 .project-card {
@@ -194,22 +193,22 @@ p {
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s;
   text-align: center;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
 }
 
 .project-card img {
   width: 100%;
-  height: 220px;
+  height: 200px; /* ลดจาก 220 */
   object-fit: cover;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 
 .project-title {
-  margin-top: 12px;
-  font-size: 16px;
+  margin-top: 10px;
+  font-size: 15px; /* ลดจาก 16 */
   color: #333;
   font-weight: 600;
 }
@@ -220,13 +219,13 @@ p {
 }
 
 .socials {
-  margin-top: 15px;
+  margin-top: 12px; /* ลดจาก 15 */
 }
 
 .socials a {
   color: #333;
-  font-size: 22px;
-  margin: 0 10px;
+  font-size: 20px;
+  margin: 0 8px;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -238,7 +237,7 @@ p {
 /* Footer */
 footer {
   text-align: center;
-  padding: 25px;
+  padding: 20px; /* ลดจาก 25 */
   color: #666;
   font-size: 14px;
 }
@@ -249,7 +248,7 @@ footer {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 60px;
     left: 0;
     width: 100%;
     background: rgba(255,255,255,0.9);
@@ -260,7 +259,7 @@ footer {
     display: flex;
   }
   nav a {
-    padding: 15px 0;
+    padding: 12px 0;
     margin: 0;
   }
   #menu-toggle {
@@ -270,10 +269,45 @@ footer {
     flex-direction: column;
   }
   .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
   .hero-text h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
+/* จัดกลางทุก section */
+section {
+  text-align: center !important;
+}
+
+/* จัดกลางหัวข้อ h2 */
+section h2 {
+  text-align: center;
+  width: 100%;
+}
+
+/* จัดกลางเนื้อหาในแต่ละ section */
+section p {
+  text-align: center;
+}
+
+/* ทักษะอยู่ตรงกลาง */
+.skill-list {
+  justify-content: center;
+  align-items: center;
+}
+
+/* ผลงานให้อยู่ตรงกลาง */
+.project-grid {
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+}
+
+/* ติดต่อฉัน */
+.socials {
+  text-align: center;
+}
+
+
